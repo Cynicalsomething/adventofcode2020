@@ -14,6 +14,7 @@ repositories {
 
 dependencies {
     implementation(kotlin("stdlib"))
+    testImplementation("org.junit.jupiter:junit-jupiter:5.7.0")
 }
 
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
@@ -22,6 +23,9 @@ tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
     }
 }
 
+tasks.withType<Test> {
+    useJUnitPlatform()
+}
 
 tasks.named<Wrapper>("wrapper") {
     gradleVersion = "6.7"
