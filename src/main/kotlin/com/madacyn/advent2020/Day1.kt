@@ -24,6 +24,7 @@ class Day1(input: String, delimiter: String = "\n") {
 }
 
 fun main() {
-    println(Day1(getInput("day1")).puzzle1()) // 713184
-    println(Day1(getInput("day1")).puzzle2()) // 261244452
+    val day1 = Day1(getInput("day1"))
+    println(day1.puzzle1()) // 713184
+    println(day1.puzzle2()) // 261244452
 }
