@@ -23,7 +23,7 @@ class Day2(input: String, delimiter: String = "\n") {
     }
 
     fun puzzle2(): Int = parsedInput.count { entry ->
-        (entry.third[entry.first.first - 1] == entry.second).xor(entry.third[entry.first.last - 1] == entry.second)
+        (entry.third[entry.first.first - 1] == entry.second) xor (entry.third[entry.first.last - 1] == entry.second)
     }
 
 }
